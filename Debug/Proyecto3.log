@@ -1,0 +1,10 @@
+﻿  Secuencia de cartas.cpp
+c:\users\usuario\desktop\verano 2018 estudios\proyecto3\proyecto3\secuencia de cartas.cpp(32): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  main.cpp
+  juego.cpp
+c:\users\usuario\desktop\verano 2018 estudios\proyecto3\proyecto3\juego.cpp(98): warning C4101: 'aux': variable local sin referencia
+c:\users\usuario\desktop\verano 2018 estudios\proyecto3\proyecto3\juego.cpp(96): warning C4101: 'fondo': variable local sin referencia
+c:\users\usuario\desktop\verano 2018 estudios\proyecto3\proyecto3\juego.cpp(96): warning C4101: 'hola': variable local sin referencia
+  Generando código...
+  Proyecto3.vcxproj -> C:\Users\usuario\Desktop\verano 2018 estudios\Proyecto3\Debug\Proyecto3.exe
+  Proyecto3.vcxproj -> C:\Users\usuario\Desktop\verano 2018 estudios\Proyecto3\Debug\Proyecto3.pdb (Partial PDB)
