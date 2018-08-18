@@ -5,45 +5,58 @@ using namespace std;
 const int NUM_FILAS = 8;
 const int MAX_JUGADORES = 4;
 const int MAX_CARTAS = 38;
-enum	tDir { NORTE, SUR, ESTE, OESTE };
-enum	tEstadoCasilla { VACIA, HIELO, MURO, CAJA, JOYA, TORTUGA };
-enum tTecla { AVANZA, DERECHA, IZQUIERDA, SALIR };
-enum	tCarta { AVANZAR, GIROIZQUIERDA, GIRODERECHA, LASER };
-enum tAccion { ROBAR, ACCION };
 
-struct	tTortuga {
+typedef enum { NORTE, SUR, ESTE, OESTE }tDir ;
+typedef enum { VACIA, HIELO, MURO, CAJA, JOYA, TORTUGA }tEstadoCasilla;
+typedef enum { AVANZA, DERECHA, IZQUIERDA, SALIR }tTecla;
+typedef enum { AVANZAR, GIROIZQUIERDA, GIRODERECHA, LASER }tCarta;
+typedef enum { ROBAR, ACCION }tAccion;
+
+typedef struct {
+	int fila;
+	int columna;
+}tCoordenada;
+
+typedef struct{
 	int	numero;
-	tDir	direccion;
-};
-struct tCasilla {
+	tDir direccion;
+}tTortuga;
+
+typedef struct{
 	tEstadoCasilla	estado;
 	tTortuga tortuga;
-};
+}tCasilla;
 
-typedef tCasilla tTablero[NUM_FILAS][NUM_FILAS];
-struct tMazo {
-	typedef tCarta tMazoJug[MAX_CARTAS];
-	tMazoJug mazoJug;
-};
-struct tJugador {
+typedef tCarta tArrayCartas[MAX_CARTAS];
+
+typedef struct {
+	tArrayCartas cartas;
+	int cont;
+} tMazo;
+
+typedef struct {
 	string nombre;
 	int fila_act;
 	int columna_act;
-	//falta el mazo y la mano 
-};
-struct tJuego {
+	tMazo mano;
+	tMazo mazo;
+}tJugador;
+
+
+typedef tCasilla tTablero[NUM_FILAS][NUM_FILAS];
+
+typedef tJugador tRegistro[MAX_JUGADORES];
+
+typedef struct {
 	int num_jugadores;
 	int turno;
-	typedef tJugador tRegistro[MAX_JUGADORES];
 	tTablero tablero;
-};
-struct tCoordenada {
-	int fila;
-	int columna;
-};
+}tJuego;
+
 
 
 void crearVacia(tMazo &mazo);
 void crearMazoAleatorio(tMazo &mazo);
 bool sacar(tMazo &mazo);
+void muestraMazo (tMazo mazo);
 
