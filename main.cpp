@@ -1,4 +1,5 @@
-#include "Secuencia de cartas.cpp"
+#include "secuenciaCartas.cpp"
+#include "juego.cpp"
 
 using namespace std;
 

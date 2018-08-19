@@ -1,6 +1,11 @@
-
-#include <string>
+#include <iostream>
+#include <algorithm>    // std::random_shuffle
+#include <vector>       // std::vector
+#include <ctime>        // std::time
+#include <cstdlib>
 using namespace std;
+#include <string>
+
 
 const int NUM_FILAS = 8;
 const int MAX_JUGADORES = 4;

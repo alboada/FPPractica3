@@ -1,10 +1,5 @@
 #include "Header.h"
-#include <iostream>
-#include <algorithm>    // std::random_shuffle
-#include <vector>       // std::vector
-#include <ctime>        // std::time
-#include <cstdlib>
-using namespace std;
+
 
 void crearVacia(tMazo &mazo) {
 	
